@@ -370,3 +370,9 @@ pub use select::{Select, SelectedOperation};
 pub use err::{ReadyTimeoutError, SelectTimeoutError, TryReadyError, TrySelectError};
 pub use err::{RecvError, RecvTimeoutError, TryRecvError};
 pub use err::{SendError, SendTimeoutError, TrySendError};
+
+#[cfg(feature="async")]
+extern crate futures as futures_rs;
+
+#[cfg(feature="async")]
+pub mod futures;

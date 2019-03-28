@@ -15,8 +15,12 @@ description = "Multi-producer multi-consumer channels for message passing"
 keywords = ["channel", "mpmc", "select", "golang", "message"]
 categories = ["algorithms", "concurrency", "data-structures"]
 
+[features]
+async = [ "futures" ]
+
 [dependencies]
 smallvec = "0.6.9"
+futures = { version = "0.1", optional = true }
 
 [dependencies.crossbeam-utils]
 version = "0.6.5"
